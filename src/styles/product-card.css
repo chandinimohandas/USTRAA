@@ -1,0 +1,57 @@
+.MuiCard-root{
+  min-width: 22rem;
+}
+
+.image{
+  float: left;
+ padding-right: 10px;
+ height: 130px;
+ width:120px;
+ margin-top: 10px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+.title{
+  display: inline-block;
+  font-size: 14px;
+  font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-bottom: 5px;
+  font-weight: bold;
+  width: 45%;
+}
+
+.rating{
+  float: right;
+  font-size: 12px;
+  font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: grey;
+}
+
+.weight{
+  font-size: 10px;
+  color: grey;
+  padding-bottom: 5px;
+}
+
+.price{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.dash{
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.MuiButton-root{
+  width:150px;
+  height:50px;
+  color: white !important;
+  background-color: forestgreen !important;
+}
+

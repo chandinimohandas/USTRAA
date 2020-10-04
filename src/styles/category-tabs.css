@@ -1,0 +1,26 @@
+.MuiPaper-elevation4 {
+    box-shadow: none !important;
+}
+
+.MuiTab-wrapper{
+    color: white;
+    font-size: 0.8rem;
+    font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.PrivateTabIndicator-colorPrimary-3{
+    background-color: grey !important;
+}
+
+.MuiTab-textColorPrimary.Mui-selected{
+    color: slategrey !important;
+}
+
+.MuiTab-root{
+    line-height: 4 !important;
+}
+
+.MuiGrid-spacing-xs-4{
+    padding: 2rem;
+}
+
