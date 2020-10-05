@@ -10,35 +10,35 @@ import CardActions from '@material-ui/core/CardActions';
 import { Button } from '@material-ui/core';
 
 function ProductCard(props) {
-    const { image, name, rating, weight, weightUnit, price, finalPrice, inStock} = props;
+  const { image, name, rating, weight, weightUnit, price, finalPrice, inStock } = props;
   return (
     <Card className="root">
       <CardActionArea>
         <CardMedia className="image" image={image} />
         <CardContent className="content">
-            <div className="title">{name}</div>
-            <div className="rating">{rating || ''}
-                {rating && <StarIcon style={{ paddingLeft: 2, fontSize: 11 }}/>}
-            </div>
-            <div className="weight">{weight ? `(${weight}${weightUnit})` : ''}</div>
-            <div className="price">{`₹ ${price}`}</div>
-            <div className="dash">{`₹ ${finalPrice}`}</div>
-            </CardContent>
+          <div className="title">{name}</div>
+          <div className="rating">{rating || ''}
+            {rating && <StarIcon style={{ paddingLeft: 2, fontSize: 11 }} />}
+          </div>
+          <div className="weight">{weight ? `(${weight}${weightUnit})` : ''}</div>
+          <div className="price">{`₹ ${price}`}</div>
+          <div className="dash">{`₹ ${finalPrice}`}</div>
+        </CardContent>
       </CardActionArea>
-      <CardActions><Button className="butt" disabled={!inStock}>{'ADD TO CART'}</Button></CardActions>
+      <CardActions><Button className="cardButton" disabled={!inStock}>{inStock ? 'ADD TO CART' : 'OUT OF STOCK'}</Button></CardActions>
     </Card>
   );
 }
 
-ProductCard.propTypes={
-    image: PropTypes.string, 
-    name: PropTypes.string, 
-    rating: PropTypes.number, 
-    weight: PropTypes.number,
-    weightUnit: PropTypes.string, 
-    price: PropTypes.number, 
-    finalPrice: PropTypes.number, 
-    inStock: PropTypes.bool
+ProductCard.propTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string,
+  rating: PropTypes.number,
+  weight: PropTypes.number,
+  weightUnit: PropTypes.string,
+  price: PropTypes.number,
+  finalPrice: PropTypes.number,
+  inStock: PropTypes.bool
 };
 
 export default ProductCard;

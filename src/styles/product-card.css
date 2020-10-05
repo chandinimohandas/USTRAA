@@ -3,55 +3,60 @@
 }
 
 .image{
-  float: left;
- padding-right: 10px;
- height: 130px;
- width:120px;
- margin-top: 10px;
- margin-left: 10px;
- margin-right: 10px;
+ float: left;
+ padding-right: 0.625rem;
+ height: 8.125rem;
+ width:7.5rem;
+ margin-top: 0.625rem;
+ margin-left: 0.625rem;
+ margin-right: 0.625rem;
 }
 
 .title{
   display: inline-block;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
   font-weight: bold;
   width: 45%;
 }
 
 .rating{
   float: right;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: grey;
 }
 
 .weight{
-  font-size: 10px;
+  font-size: 0.625rem;
   color: grey;
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
 }
 
 .price{
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding-right: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 
 .dash{
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: line-through;
 }
 
-.MuiButton-root{
-  width:150px;
-  height:50px;
+.cardButton{
+  width:9.375rem;
+  height:3.125rem;
   color: white !important;
   background-color: forestgreen !important;
+  margin: -2rem 0 1rem 8.75rem !important;
+}
+
+.MuiButtonBase-root.Mui-disabled{
+  background-color: #b0b0b0 !important;
 }
 
