@@ -8,7 +8,7 @@
     font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.PrivateTabIndicator-colorPrimary-3{
+.PrivateTabIndicator-colorPrimary-9{
     background-color: grey !important;
 }
 
@@ -26,8 +26,37 @@
 
 .view-more-button{
     box-shadow:
-     rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
-     rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, 
-     rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
-     margin-right: 2rem !important;
+     rgba(0, 0, 0, 0) 0px 2px 4px -1px,
+     rgba(0, 0, 0, 0.1) 0px 4px 5px 0px, 
+     rgba(0, 0, 0, 0.1) 0px 1px 10px 0px;
+     width: 100%;
+     font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
+
+/* Category select styles */
+.MuiOutlinedInput-notchedOutline{
+    border-color: transparent !important;
+    box-shadow:
+     rgba(0, 0, 0, 0) 0px 2px 4px -1px,
+     rgba(0, 0, 0, 0.1) 0px 4px 5px 0px, 
+     rgba(0, 0, 0, 0.1) 0px 1px 10px 0px;
+}
+
+.MuiOutlinedInput-input {
+    padding: 8.5px 14px !important;
+}
+
+.MuiSelect-selectMenu{
+    text-align: center;
+    font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 0.875rem !important;
+}
+
+.MuiMenuItem-root{
+    font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 0.875rem !important;
+}
+
+.MuiPaper-root{
+    width: 48%;
 }

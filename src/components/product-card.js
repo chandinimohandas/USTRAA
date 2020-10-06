@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import CardActions from '@material-ui/core/CardActions';
 import { Button } from '@material-ui/core';
 
-function ProductCard(props) {
+export default function ProductCard(props) {
   const { image, name, rating, weight, weightUnit, price, finalPrice, inStock } = props;
   return (
     <Card className="root">
@@ -40,5 +40,3 @@ ProductCard.propTypes = {
   finalPrice: PropTypes.number,
   inStock: PropTypes.bool
 };
-
-export default ProductCard;

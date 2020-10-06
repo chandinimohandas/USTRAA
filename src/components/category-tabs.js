@@ -1,40 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import './../styles/category-tabs.css';
 import ProductCard from './product-card';
 import { Button, Grid } from '@material-ui/core';
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`scrollable-auto-tabpanel-${index}`}
-      aria-labelledby={`scrollable-auto-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
+import CategoryChangeDropdown from './category-change-dropdown';
 
 function a11yProps(index) {
   return {
@@ -133,19 +105,12 @@ export default function ScrollableTabsButtonAuto() {
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
           >
-            {/* <Tab style={{backgroundImage:'url("https://d1ebdenobygu5e.cloudfront.net/media/catalog/product/gallery/resized/300/300-x-180_BLANK_2_1.png")'}} label="Item One" {...a11yProps(0)} />
-            <Tab label="Item Two" {...a11yProps(1)} />
-            <Tab label="Item Three" {...a11yProps(2)} />
-            <Tab label="Item Four" {...a11yProps(3)} />
-            <Tab label="Item Five" {...a11yProps(4)} />
-            <Tab label="Item Six" {...a11yProps(5)} />
-            <Tab label="Item Seven" {...a11yProps(6)} /> */}
-            {categories && categories.map((item, index) => {
+            {categories && categories.map((category, index) => {
               return <Tab
-                key={item['category_name']}
-                value={item["category_id"]}
-                label={item['category_name']}
-                style={getTabStyle(item['category_image'])}
+                key={category["category_id"]}
+                value={category["category_id"]}
+                label={category["category_name"]}
+                style={getTabStyle(category["category_image"])}
                 {...a11yProps(index)} />
             })}
           </Tabs>
@@ -165,33 +130,23 @@ export default function ScrollableTabsButtonAuto() {
                   inStock={product["is_in_stock"]} />
               </Grid>
             })}
-            <Grid container direction="row" justify="center" alignItems="center">
-              <Button className={'view-more-button'}>[+] View More</Button>
-              <Button className={'view-more-button'} onClick={() => { setShowLess(!showLess) }}>{showLess ? '[+] View More' : '[-] View Less'}</Button>
+            <Grid container spacing={1} direction="row" justify="center" alignItems="center">
+              <Grid item xs={6} sm={6} md={6}>
+                <CategoryChangeDropdown
+                  value={value}
+                  categoryList={categories}
+                  setCategoryList={setValue} />
+              </Grid>
+              <Grid item xs={6} sm={6} md={6}>
+                <Button
+                  className={'view-more-button'}
+                  onClick={() => { setShowLess(!showLess) }}>
+                  {showLess ? '[+] View More' : '[-] View Less'}
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
         </React.Fragment>
-        {/* <TabPanel value={value} index={0} children=
-        {}> 
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-            Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-            Item Three
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-            Item Four
-        </TabPanel>
-        <TabPanel value={value} index={4}>
-            Item Five
-        </TabPanel>
-        <TabPanel value={value} index={5}>
-            Item Six
-        </TabPanel>
-        <TabPanel value={value} index={6}>
-            Item Seven
-        </TabPanel> */}
       </div>
     );
   }
