@@ -37,18 +37,11 @@ export default function ScrollableTabsButtonAuto() {
       try {
         const response = await fetch("https://backend.ustraa.com/rest/V1/api/homemenucategories/v1.0.1?device_type=mob");
         const data = await response.json();
-        console.log(data["category_list"]);
-        console.log(data["product_list"]["products"]);
         setTitle(data["heading"]);
         setCategories([...data["category_list"], ...[{
           "category_id": "111",
           "category_name": "View All",
           "category_image": "https://image.freepik.com/free-vector/lines-grey-background_1053-300.jpg"
-        }]]);
-        console.log([...data["category_list"], ...[{
-          "category_id": "111",
-          "category_name": "View All",
-          "category_image": ""
         }]]);
         setProductList(data["product_list"]["products"]);
       } catch (error) {
@@ -64,7 +57,6 @@ export default function ScrollableTabsButtonAuto() {
       try {
         const response = await fetch("https://backend.ustraa.com/rest/V1/api/catalog/v1.0.1?category_id=" + value);
         const data = await response.json();
-        console.log(data["products"]);
         setProductList(data["products"]);
       } catch (error) {
         console.error(error);
