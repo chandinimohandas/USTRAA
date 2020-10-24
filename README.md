@@ -1,4 +1,7 @@
-To run the assignment:
+Project hosted at: https://ustraaa.netlify.app/
 
-1. Start the server using 'npm start'. 
-2. Then open http://localhost:3000/ to see the app.
+To run the project on local:
+
+1. Install all the dependencies using 'npm install'
+2. Start the server using 'npm start'.
+3. Then open the app on http://localhost:3000
